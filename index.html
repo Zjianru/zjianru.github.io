@@ -5,6 +5,7 @@ description: "Talk is cheap,Show me the code."
 
 {% for post in paginator.posts %}
 <div class="post-preview">
+    <script src="http://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
             {{ post.title }}
