@@ -16,14 +16,14 @@ tags:
 
 但是发生了如下错误
 ```bash
-$ curl localhost:8080/books -u user:password
+$ curl localhost:8080/hello -u user:password
 
 {
-	"timestamp":"2019-02-22T15:03:49.322+0000",
+	"timestamp":"2019-05-14T15:03:49.322+0000",
 	"status":500,
 	"error":"Internal Server Error",
 	"message":"There is no PasswordEncoder mapped for the id \"null\"",
-	"path":"/books"
+	"path":"/hello"
 }
 ```
 IDEA 控制台报错如下：
@@ -37,9 +37,9 @@ java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the i
 
 在查阅资料之后得知
 
-在 Spring Security 5.0之前，默认的 PasswordEncoder 是 NoOpPasswordEncoder。它需要纯文本密码。
+在 Spring Security 5.0之前，默认的 `PasswordEncoder` 是 `NoOpPasswordEncoder`。它需要纯文本密码。
 
-但是在 Spring Security 5.0 中，默认值为 DelegatingPasswordEncoder，它需要密码存储格式。
+但是在 Spring Security 5.0 中，默认值为 `DelegatingPasswordEncoder`，它需要密码存储格式。
 
 详情见![官方文档](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#pe-dpe)
 
