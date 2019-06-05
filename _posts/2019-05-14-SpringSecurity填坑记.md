@@ -41,7 +41,7 @@ java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the i
 
 但是在 Spring Security 5.0 中，默认值为 `DelegatingPasswordEncoder`，它需要密码存储格式。
 
-详情见![官方文档](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#pe-dpe)
+详情见[官方文档](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#pe-dpe)
 
 ## 解救代码
 
